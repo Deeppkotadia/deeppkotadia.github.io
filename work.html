@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Kotadia — Work</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  (function(){
+    var saved = localStorage.getItem('theme');
+    var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    var theme = saved || (prefersLight ? 'light' : 'dark');
+    if(theme === 'light') document.documentElement.setAttribute('data-theme','light');
+  })();
+</script>
+</head>
+<body>
+<div class="noise"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Deep Kotadia /</a>
+  <ul class="nav-links">
+    <li><a href="index.html">About</a></li>
+    <li><a href="work.html" class="active">Work</a></li>
+  </ul>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark theme" title="Toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  </button>
+  <div class="nav-ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html" onclick="closeMenu()">About</a>
+  <a href="work.html" class="active" onclick="closeMenu()">Work</a>
+</div>
+
+<div class="page">
+
+<!-- ── WORK HERO ── -->
+<section id="work-hero" class="page-top">
+  <p class="about-greeting fu d1"><span class="hl">~/work</span> — projects · publications · certifications</p>
+  <h1 class="about-name fu d2">Selected<br><em>Work</em></h1>
+  <p class="about-role fu d3">A snapshot of research projects, peer-reviewed papers, a patent, and ongoing learning.</p>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <p class="sec-label">Projects</p>
+  <h2 class="sec-title">Selected <em>Builds</em></h2>
+  <div class="projects-list">
+
+    <div class="proj-item featured reveal">
+      <div class="proj-left">
+        <div class="proj-meta">
+          <span class="proj-badge llm">LLM · M.Tech Thesis</span>
+          <span class="proj-date-inline">2024 — Present</span>
+        </div>
+        <h3 class="proj-title">Catalytic Depolymerization of Polyethylene — LLM-Curated Dataset &amp; ML Yield Prediction</h3>
+        <p class="proj-desc">M.Tech thesis at IIT Madras under <strong>Prof. Jithin John Varghese</strong> &amp; <strong>Prof. Tarak Patra</strong>.<br>End-to-end AI-driven literature mining pipeline using a local LLM to automate extraction of catalytic pyrolysis data, paired with ML models for hydrocarbon yield prediction.</p>
+        <ul class="proj-highlights">
+          <li>Built an end-to-end AI-driven literature mining pipeline using <strong>Gemma4:e4b</strong> (Local LLM) to extract catalytic pyrolysis data from <strong>736+ scientific publications</strong></li>
+          <li>Curated a structured dataset of <strong>559 experimental datapoints</strong> from 73 research papers — covering 120+ catalysts, 6 reactor configurations, and operating conditions for catalytic polyethylene pyrolysis</li>
+          <li>Built and optimized ML models (XGBoost, Random Forest, SVR) using <strong>Optuna-TPE</strong> for hydrocarbon product yield prediction — R² up to 0.78 for gas yield estimation</li>
+          <li>Engineered a fully local <strong>GPU-accelerated scientific workflow</strong> integrating OCR, PDF parsing, prompt engineering, and schema validation — drastically reducing manual data curation effort</li>
+        </ul>
+        <div class="proj-tags"><span class="proj-tag">Gemma (Local LLM)</span><span class="proj-tag">XGBoost</span><span class="proj-tag">Random Forest</span><span class="proj-tag">SVR</span><span class="proj-tag">Optuna-TPE</span><span class="proj-tag">OCR / PDF Parsing</span><span class="proj-tag">Prompt Engineering</span></div>
+        <div class="proj-links"><span class="proj-link soon">Link coming soon</span></div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-result">0.78</div>
+        <div class="proj-result-label">R² · Gas Yield</div>
+      </div>
+    </div>
+
+    <div class="proj-item featured reveal">
+      <div class="proj-left">
+        <div class="proj-meta">
+          <span class="proj-badge ml">Scientific ML</span>
+          <span class="proj-date-inline">Jan 2025 — May 2025</span>
+        </div>
+        <h3 class="proj-title">Prediction of Absorption Energies of Chemical Species on Metal Catalyst Surfaces using ML Models </h3>
+        <p class="proj-desc">ML models to predict adsorption energies across 8 transition metals, replacing costly DFT calculations.</p>
+        <ul class="proj-highlights">
+          <li>Developed and benchmarked 5 ML models to predict adsorption energies across 8 transition metals, achieving 0.12 eV MAE, reducing computational cost of DFT-based catalyst screening by >80%.</li>
+          <li>Engineered and automated descriptor discovery via PCA + varimax rotation, identifying 3 optimal physical descriptors that captured 98% dataset variance, outperforming conventional trial-and-error approaches.</li>
+        </ul>
+        <div class="proj-tags"><span class="proj-tag">XGBoost</span><span class="proj-tag">SVR</span><span class="proj-tag">PCA</span><span class="proj-tag">ASE</span><span class="proj-tag">DFT</span></div>
+        <div class="proj-links"><span class="proj-link soon">Link coming soon</span></div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-result">0.12</div>
+        <div class="proj-result-label">eV MAE</div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-left">
+        <div class="proj-meta">
+          <span class="proj-badge ml">Scientific ML</span>
+          <span class="proj-date-inline">Aug 2024 — Dec 2024</span>
+        </div>
+        <h3 class="proj-title">Optimization of Steam Methane Reforming Reaction to maximize conversion using Neural Networks</h3>
+        <p class="proj-desc">Deep NN to model methane conversion, enabling reliable process simulations without costly experiments.</p>
+        <ul class="proj-highlights">
+          <li>Engineered and trained a deep neural network (8-layer, 50-neuron) to model methane conversion, achieving <0.5% prediction error versus numerical solvers, enabling reliable process simulations without costly experiments. </li>
+          <li>Automated reaction optimization using grid search over 100,000 parameter combinations, identifying optimal conditions that maximized CH₄ conversion by 71% while significantly reducing manual iteration time.</li>
+          <li>Optimized model architecture through systematic hyperparameter tuning, reducing weights by 80% with negligible loss in accuracy, demonstrating scalable deployment for data-driven process optimization.</li>
+        </ul>
+        <div class="proj-tags"><span class="proj-tag">PyTorch</span><span class="proj-tag">Grid Search</span><span class="proj-tag">ODE</span><span class="proj-tag">Keras</span></div>
+        <div class="proj-links"><span class="proj-link soon">Link coming soon</span></div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-result">71%</div>
+        <div class="proj-result-label">CH₄ Gain</div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-left">
+        <div class="proj-meta">
+          <span class="proj-badge ml">Data Analysis · EDA</span>
+          <span class="proj-date-inline">2025</span>
+        </div>
+        <h3 class="proj-title">Data-Driven Analysis of Friction Factor &amp; Pressure Drop in Packed Bed Reactors</h3>
+        <p class="proj-desc">Multi-source packed bed dataset with end-to-end exploratory analysis and correlation modelling to identify dominant drivers of friction factor and pressure drop behavior.</p>
+        <ul class="proj-highlights">
+          <li>Curated and analyzed a <strong>multi-source packed bed dataset of 1,549 experimental records</strong> spanning <strong>11 references</strong> and <strong>8 particle geometries</strong>; performed end-to-end EDA including missing value assessment, statistical profiling, and outlier detection to establish data quality baselines for downstream modelling</li>
+          <li>Engineered a correlation analysis pipeline combining <strong>Pearson correlation matrices</strong>, <strong>one-way ANOVA with η² effect sizes</strong>, and <strong>wall-effect subset analysis (D/d<sub>p</sub> &lt; 10)</strong> to quantify feature dependencies — identifying particle sphericity (η² = 0.995) and fluid type (η² = 0.96 for viscosity) as the dominant drivers of packed bed behavior</li>
+        </ul>
+        <div class="proj-tags"><span class="proj-tag">Pandas</span><span class="proj-tag">NumPy</span><span class="proj-tag">SciPy</span><span class="proj-tag">ANOVA</span><span class="proj-tag">Pearson Correlation</span><span class="proj-tag">EDA</span><span class="proj-tag">Matplotlib</span></div>
+        <div class="proj-links"><span class="proj-link soon">Link coming soon</span></div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-result">1,549</div>
+        <div class="proj-result-label">Records · 11 Refs</div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-left">
+        <div class="proj-meta">
+          <span class="proj-badge chem">Cheminformatics</span>
+          <span class="proj-date-inline">Jan 2025 — Apr 2025</span>
+        </div>
+        <h3 class="proj-title">De Novo Molecular Generation using AI-based Bigram Models </h3>
+        <p class="proj-desc">Developed a statistical AI language model (Bigram) to autonomously generate chemically realistic molecules.</p>
+        <ul class="proj-highlights">
+          <li>Trained the model on a dataset of 3,000 SMILES strings, engineering a sampling process based on learned character transition probabilities to capture local molecular syntax and successfully generate 100 novel SMILES sequences.</li>
+          <li>Evaluated the structural uniqueness and chemical viability of the generated molecules by calculating Tanimoto Similarity coefficients with Morgan fingerprints via RDKit.</li>
+          <li>Achieved an average Tanimoto similarity score of 0.024 against the training dataset, demonstrating the generation of highly unique and distinct chemical structures.</li>
+        </ul>
+        <div class="proj-tags"><span class="proj-tag">RDKit</span><span class="proj-tag">SMILES</span><span class="proj-tag">Bigram</span><span class="proj-tag">Morgan Fingerprints</span></div>
+        <div class="proj-links"><span class="proj-link soon">Link coming soon</span></div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-result">100</div>
+        <div class="proj-result-label">Novel Molecules</div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-left">
+        <div class="proj-meta">
+          <span class="proj-badge eng">Engineering</span>
+          <span class="proj-date-inline">Aug 2022 — Dec 2022</span>
+        </div>
+        <h3 class="proj-title">Process Simulation of Ethyl Lactate - A Green Solvent</h3>
+        <p class="proj-desc">Simulated and optimized ethyl lactate production via reactive distillation using DWSIM with NRTL property model.</p>
+        <ul class="proj-highlights">
+          <li>Simulated and optimized ethyl lactate production via reactive distillation using DWSIM, achieving 96.13% lactic acid conversion & 95.7% ethyl lactate yield.</li>
+          <li>Designed a process flowsheet integrating fermentation, reactive distillation, and product purification, resulting in an ethyl lactate production rate of 234 g/h and energy consumption of 111.41 kJ/g.</li>
+          <li>Applied the NRTL property to represent non-ideal mixtures and optimize operating parameters for high-purity.</li>
+        </ul>
+        <div class="proj-tags"><span class="proj-tag">DWSIM</span><span class="proj-tag">NRTL</span><span class="proj-tag">Reactive Distillation</span></div>
+        <div class="proj-links"><span class="proj-link soon">Link coming soon</span></div>
+      </div>
+      <div class="proj-right">
+        <div class="proj-result">96%</div>
+        <div class="proj-result-label">Conversion</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PUBLICATIONS ── -->
+<section id="publications">
+  <p class="sec-label">Publications & Patents</p>
+  <h2 class="sec-title">Research <em>Output</em></h2>
+  <div class="pub-list">
+    <a class="pub-card reveal" href="https://link.springer.com/article/10.1007/s11356-021-15789-z" target="_blank" rel="noopener">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-title">A Comprehensive Study on Amalgamation of Sustainable Solar Powered Distillation for Arsenic and Fluoride Removal from Groundwater</div>
+        <div class="pub-venue">Published in <strong>Environmental Science &amp; Pollution Research</strong> (Springer Nature) · 2021 · Vol. 28(48), pp. 67909–67924</div>
+        <span class="pub-type paper">Journal Paper</span>
+      </div>
+    </a>
+    <a class="pub-card reveal" href="https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2021/Tilala.pdf" target="_blank" rel="noopener">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-title">Developments and Future Insights of Using Nanofluids for Heat Transfer Enhancements in Geothermal Systems</div>
+        <div class="pub-venue">Presented at the <strong>46th Stanford Geothermal Workshop</strong> · Stanford University, USA · 2021</div>
+        <span class="pub-type paper">Conference Paper</span>
+      </div>
+    </a>
+    <a class="pub-card reveal" href="https://www.worldgeothermal.org/pdf/IGAstandard/WGC/2020//27028.pdf" target="_blank" rel="noopener">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-title">Geothermal Water Purification using Green Adsorbent</div>
+        <div class="pub-venue">Proceedings of the <strong>World Geothermal Congress 2020</strong> · Reykjavík, Iceland</div>
+        <span class="pub-type paper">Conference Paper</span>
+      </div>
+    </a>
+    <a class="pub-card reveal" href="https://drive.google.com/file/d/1wRYH8nx8OWQPUl2MJmTjsL5THYshUwqz/view?usp=sharing" target="_blank" rel="noopener">
+      <div class="pub-num">04</div>
+      <div class="pub-body">
+        <div class="pub-title">Design of Solar Panel Cleaning System</div>
+        <div class="pub-venue">Granted <strong>Indian Design Patent</strong> · Reg. No. 347167-001 · Patent Office, Govt. of India · 2021</div>
+        <span class="pub-type patent">Patent</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications">
+  <p class="sec-label">Certifications</p>
+  <h2 class="sec-title">Continuous <em>Learning</em></h2>
+  <div class="cert-grid reveal">
+    <a class="cert-card" href="https://drive.google.com/file/d/1HzRwXfXUNHOYdoyqO590NODNJLJiEUDD/view?usp=drive_link" target="_blank" rel="noopener"><div class="cert-issuer">AIChE / RAPID</div><div class="cert-name">Fundamentals of Process Intensification (ELA300)</div></a>
+    <a class="cert-card" href="https://drive.google.com/file/d/1Oqr2sbIZYrOh0jm3pPes_LXE_MTleMu-/view?usp=sharing" target="_blank" rel="noopener"><div class="cert-issuer">AIChE</div><div class="cert-name">Introduction to Python for Chemical Engineering</div></a>
+    <a class="cert-card" href="https://drive.google.com/file/d/1hOj5KRi1TDSPBTCIEU46d3-kAXT_gHLO/view?usp=sharing" target="_blank" rel="noopener"><div class="cert-issuer">AIChE / SAChE</div><div class="cert-name">Introduction to Process Safety (ELA950)</div></a>
+    <a class="cert-card" href="https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_ezJdPuy9SFRvsuroG_1776440968374_completion_certificate.pdf" target="_blank" rel="noopener"><div class="cert-issuer">Forage / BCG</div><div class="cert-name">BCG Data Science Job Simulation</div></a>
+    <a class="cert-card" href="https://drive.google.com/file/d/1_Xp4h7LcD4zsBUBKcY8-3FQ3wkqG4KBK/view" target="_blank" rel="noopener"><div class="cert-issuer">GIAN Course</div><div class="cert-name">Generative AI Foundations, GANs & VAEs</div></a>
+    <a class="cert-card" href="https://drive.google.com/file/d/1qW1wHI7eXk2MJsNxf1BQtAgkKL2rCCJH/view?usp=sharing" target="_blank" rel="noopener"><div class="cert-issuer">Hugging Face</div><div class="cert-name">Fundamentals of Agents</div></a>
+    <a class="cert-card" href="https://freecodecamp.org/certification/deepkotadia/data-analysis-with-python-v7" target="_blank" rel="noopener"><div class="cert-issuer">FreeCodeCamp</div><div class="cert-name">Data Analysis with Python</div></a>
+    <a class="cert-card" href="https://freecodecamp.org/certification/deepkotadia/machine-learning-with-python-v7" target="_blank" rel="noopener"><div class="cert-issuer">FreeCodeCamp</div><div class="cert-name">Machine Learning with Python</div></a>
+    <a class="cert-card" href="https://www.linkedin.com/learning/certificates/ae50016cc51599dde924c6bd379b8a004562f7b5746868bd81afe168bd75ee3c" target="_blank" rel="noopener"><div class="cert-issuer">LinkedIn Learning</div><div class="cert-name">Intermediate SQL: Data Reporting & Analysis</div></a>
+    <a class="cert-card" href="https://www.linkedin.com/learning/certificates/522fafeb88d344cb1866ba120e5cce944f9bab4f887b87e07df8846f18c2d489" target="_blank" rel="noopener"><div class="cert-issuer">LinkedIn Learning</div><div class="cert-name">Advanced SQL for Data Science: Time Series</div></a>
+    <a class="cert-card" href="https://drive.google.com/file/d/1wRePrVjNp2GeAITj3SUYlZ8L690Y_TvC/view" target="_blank" rel="noopener"><div class="cert-issuer">NIELIT Calicut</div><div class="cert-name">Embedded Linux</div></a>
+    <a class="cert-card" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/YtWaumzWHmKiqP63y/pH8NRjPQN55KWunfb_YtWaumzWHmKiqP63y_ezJdPuy9SFRvsuroG_1742654046566_completion_certificate.pdf" target="_blank" rel="noopener"><div class="cert-issuer">Siemens / Forage</div><div class="cert-name">Siemens Mobility Operations Simulation</div></a>
+    <div class="cert-card ongoing"><div class="cert-issuer">FreeCodeCamp</div><div class="cert-name">Python Certification</div><span class="cert-status">In progress</span></div>
+    <div class="cert-card ongoing"><div class="cert-issuer">FreeCodeCamp</div><div class="cert-name">Relational Database Certification</div><span class="cert-status">In progress</span></div>
+  </div>
+</section>
+
+<!-- ── CTA back to about ── -->
+<section id="cta-back" style="text-align:center;">
+  <p class="sec-label" style="justify-content:center;">Next</p>
+  <h2 class="sec-title">Like what you see? <em>Let's talk.</em></h2>
+  <div class="about-ctas" style="justify-content:center;">
+    <a href="index.html#contact" class="btn btn-primary">Get in Touch →</a>
+    <a href="index.html" class="btn btn-outline">← Back to About</a>
+  </div>
+</section>
+
+</div><!-- /page -->
+
+<div class="footer-wrap">
+  <footer>
+    <span>© 2026 Deep Kotadia &nbsp;·&nbsp; Built with <a href="#" target="_blank">Local LLM</a></span>
+    <div class="footer-links">
+      <a href="index.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="mailto:kotadiadeep2489@gmail.com">Email</a>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
