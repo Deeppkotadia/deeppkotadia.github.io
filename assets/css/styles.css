@@ -301,7 +301,8 @@ footer a:hover { color:var(--accent); }
 
 /* ── RESPONSIVE ── */
 @media(max-width:680px){
-  .about-grid { grid-template-columns:1fr; }
+  .about-grid { grid-template-columns:1fr; gap:2rem; }
+  .about-photo-wrap { order:-1; }
   .endeavors-grid { grid-template-columns:1fr; }
   .skills-wrap { grid-template-columns:1fr; }
   .contact-links-grid { grid-template-columns:1fr; }
@@ -310,7 +311,7 @@ footer a:hover { color:var(--accent); }
   .edu-grade { text-align:left; }
   .ta-row { flex-direction:column; align-items:flex-start; gap:0.4rem; }
   .nav-links { display:none; }
-  .nav-ham { display:flex; }
+  .nav-ham { display:flex; margin-left:16px; }
   .theme-toggle { margin-left:auto; }
   .proj-item { grid-template-columns:1fr; }
   .proj-right { text-align:left; }
