@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7dffb3"/>
+      <stop offset="1" stop-color="#4ff0e1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#08090a"/>
+  <text x="50%" y="50%" dy="0.02em" text-anchor="middle" dominant-baseline="central"
+        font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="32" font-weight="600" fill="url(#g)">DK</text>
+</svg>
